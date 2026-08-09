@@ -1,0 +1,839 @@
+IMPORTANT: Only update the PERSONAL PROFILE, ABOUT ME, PERSONAL FACTS, SEARCH ANSWERS, and INTERESTS content.
+
+
+
+DO NOT modify anything else.
+
+
+
+STRICT RULES:
+
+
+
+- Do NOT redesign the UI.
+
+- Do NOT change the layout.
+
+- Do NOT change animations.
+
+- Do NOT change colors.
+
+- Do NOT change fonts or typography.
+
+- Do NOT change spacing.
+
+- Do NOT change components.
+
+- Do NOT change responsiveness.
+
+- Do NOT change functionality.
+
+- Do NOT change navigation.
+
+- Do NOT change file structure.
+
+- Do NOT rename files.
+
+- Do NOT refactor code.
+
+- Do NOT change any existing projects.
+
+- Do NOT change project descriptions.
+
+- Do NOT change project images.
+
+- Do NOT change project links.
+
+- Do NOT change project order.
+
+- Do NOT change project status.
+
+- Do NOT change certificates.
+
+- Do NOT change achievements.
+
+- Do NOT change education.
+
+- Do NOT change experience.
+
+- Do NOT change timeline.
+
+- Do NOT change skills unless they are generated from the personal profile below.
+
+- Do NOT change social links or icons.
+
+- Do NOT delete or replace any existing content outside the personal profile sections.
+
+
+
+If there are already projects, certificates, achievements, timeline entries, blogs, or other portfolio content, leave them EXACTLY as they are.
+
+
+
+The ONLY thing you should replace is placeholder personal information with the following.
+
+
+
+────────────────────────────────────────
+
+PERSONAL PROFILE
+
+────────────────────────────────────────
+
+
+
+Name: Udayraj
+
+
+
+Birthday: November 9
+
+
+
+Role:
+
+Student • Explorer • Builder
+
+
+
+Short Bio:
+
+
+
+I'm a curious student who loves exploring ideas, understanding how things work, and turning those ideas into real projects. Most of my ideas are currently bigger than my skillset, and that's exactly why I'm constantly learning.
+
+
+
+Long-Term Mission:
+
+
+
+I want to explore the universe.
+
+
+
+Astronomy and physics aren't just interests—they're what I hope to spend a significant part of my life understanding. I want to build technology that helps people learn, explore, and experience the universe in new ways.
+
+
+
+────────────────────────────────────────
+
+ABOUT ME
+
+────────────────────────────────────────
+
+
+
+If something catches my attention, my first instinct is to ask:
+
+
+
+"How does it work?"
+
+
+
+Once I understand it, I immediately start thinking:
+
+
+
+"Can I build something around this?"
+
+
+
+That curiosity has taken me into many different fields including artificial intelligence, robotics, astronomy, physics, engineering, coding, product design, and interactive web experiences.
+
+
+
+I'm someone who enjoys learning far more than staying inside one comfort zone. I love exploring completely new topics, meeting new people, participating in communities, joining programs, and collecting experiences that help me grow.
+
+
+
+Many of my project ideas are much larger than what I currently know how to build.
+
+
+
+Instead of making my ideas smaller, I focus on becoming better until I can eventually build them.
+
+
+
+One sentence that describes me perfectly:
+
+
+
+"My ideas are currently bigger than my skillset. I'm working on fixing that."
+
+
+
+────────────────────────────────────────
+
+PERSONALITY
+
+────────────────────────────────────────
+
+
+
+Explorer
+
+
+
+Builder
+
+
+
+Curious
+
+
+
+Continuous Learner
+
+
+
+Problem Solver
+
+
+
+Pattern Seeker
+
+
+
+Overthinker
+
+
+
+Experimenter
+
+
+
+────────────────────────────────────────
+
+INTERESTS
+
+────────────────────────────────────────
+
+
+
+Artificial Intelligence
+
+
+
+AI Agents
+
+
+
+Machine Learning
+
+
+
+Coding
+
+
+
+Technology
+
+
+
+Robotics
+
+
+
+Astronomy
+
+
+
+Physics
+
+
+
+Quantum Mechanics
+
+
+
+Mechanical Engineering
+
+
+
+Space Exploration
+
+
+
+Cars & Engines
+
+
+
+3D Design
+
+
+
+Consumer Technology
+
+
+
+Product Building
+
+
+
+Books
+
+
+
+Travel
+
+
+
+Food
+
+
+
+Pattern Recognition
+
+
+
+Content Creation
+
+
+
+Learning New Skills
+
+
+
+────────────────────────────────────────
+
+HOBBIES
+
+────────────────────────────────────────
+
+
+
+Building side projects
+
+
+
+Rubik's Cubes
+
+
+
+Chess
+
+
+
+Reading books
+
+
+
+Traveling
+
+
+
+Trying new food
+
+
+
+Mechanical tinkering
+
+
+
+Learning new technologies
+
+
+
+Meeting new people
+
+
+
+Formula 1
+
+
+
+Cricket
+
+
+
+Basketball
+
+
+
+────────────────────────────────────────
+
+ENGINEERING
+
+────────────────────────────────────────
+
+
+
+I've always enjoyed understanding how physical things work.
+
+
+
+One day I opened an old phone simply because I wanted to see what was inside.
+
+
+
+Whenever I discover a component I don't recognize, I naturally become curious about what it does and why it exists.
+
+
+
+I enjoy mechanical systems, robotics, engineering, engines, hardware, and building physical things with my 3D pen.
+
+
+
+Traditional drawing isn't really my thing.
+
+
+
+Designing systems and building products is.
+
+
+
+────────────────────────────────────────
+
+RUBIK'S CUBE
+
+────────────────────────────────────────
+
+
+
+Cubing is one of my favorite hobbies.
+
+
+
+I can solve a standard 3×3 Rubik's Cube in around 50 seconds.
+
+
+
+I've also explored puzzles like:
+
+
+
+• 2×2
+
+• Pyraminx
+
+• Megaminx
+
+• Other twisty puzzles
+
+
+
+My curiosity eventually led me to build my Rubik's Cube AI Coach project.
+
+
+
+────────────────────────────────────────
+
+SEARCH ANSWERS
+
+────────────────────────────────────────
+
+
+
+Who is Udayraj?
+
+
+
+A student, explorer, and builder who enjoys learning difficult things and turning ideas into experiments.
+
+
+
+When is Udayraj's birthday?
+
+
+
+November 9.
+
+
+
+What is Udayraj obsessed with?
+
+
+
+Understanding the universe and building things inspired by it.
+
+
+
+What does Udayraj build?
+
+
+
+AI experiments, interactive web experiences, and ambitious ideas that slowly become reality.
+
+
+
+What does Udayraj do for fun?
+
+
+
+Solve Rubik's Cubes, build projects, explore technology, travel, try new food, and occasionally take apart electronics just to understand what's inside.
+
+
+
+Can Udayraj solve a Rubik's Cube?
+
+
+
+Yes. Around 50 seconds on a 3×3.
+
+
+
+That curiosity eventually became the Rubik's Cube AI Coach project.
+
+
+
+Is Udayraj an overthinker?
+
+
+
+Absolutely.
+
+
+
+Fortunately, most of that overthinking eventually becomes projects.
+
+
+
+Why does Udayraj like engineering?
+
+
+
+Because understanding how things work is just as exciting as building them.
+
+
+
+What subjects interest Udayraj?
+
+
+
+AI, coding, robotics, astronomy, physics, quantum mechanics, engineering, mechanical systems, space, and product building.
+
+
+
+What is Udayraj learning?
+
+
+
+Usually more things at the same time than is probably reasonable.
+
+
+
+What motivates Udayraj?
+
+
+
+Curiosity.
+
+
+
+Learning.
+
+
+
+Building.
+
+
+
+Exploring.
+
+
+
+────────────────────────────────────────
+
+CURRENTLY EXPLORING
+
+────────────────────────────────────────
+
+
+
+Artificial Intelligence
+
+
+
+AI Agents
+
+
+
+Machine Learning
+
+
+
+Astronomy
+
+
+
+Physics
+
+
+
+Quantum Mechanics
+
+
+
+Robotics
+
+
+
+Engineering
+
+
+
+3D Web Technologies
+
+
+
+────────────────────────────────────────
+
+IMPORTANT
+
+
+
+After updating this content:
+
+
+
+- Do NOT modify any existing project.
+
+- Do NOT modify any certificate.
+
+- Do NOT modify any achievement.
+
+- Do NOT modify any experience.
+
+- Do NOT modify any timeline.
+
+- Do NOT modify any existing portfolio data.
+
+- Do NOT create fake accomplishments.
+
+- Do NOT change existing links.
+
+- Do NOT touch any code unrelated to these personal content sections.
+
+
+
+Only replace placeholder personal information with the content above and leave the rest of the portfolio exactly as it is.
+
+
+
+────────────────────────────────────────
+ADDITIONAL FEATURES TO IMPLEMENT
+────────────────────────────────────────
+
+The following are NEW FEATURES to ADD.
+
+Do NOT redesign the existing website.
+
+Do NOT remove or replace any existing functionality.
+
+Only extend the current implementation while keeping everything visually consistent.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONTACT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Keep all existing contact methods.
+
+Add the following platforms if they don't already exist.
+
+X (Twitter)
+
+https://x.com/udayraj67?s=11
+
+Reddit
+
+https://www.reddit.com/u/Cube_solver23/s/DEE5zDjAlN
+
+Discord
+
+Username:
+udayraj0575
+
+Use the proper icons and preserve the existing design.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FINDER APPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Add the following applications to the Finder/App Launcher.
+
+These should work like the existing apps and open properly.
+
+• Chess
+  - Prefer Chess.com if internet access is available.
+  - Otherwise open https://www.chess.com/
+
+
+
+• Duolingo
+  - https://www.duolingo.com/
+
+• Rubik's Cube AI Coach-
+
+• Notes app
+  app store 
+
+Requirements:
+
+• They should launch correctly.
+• They should match the existing app design.
+• They should support opening, closing and minimizing exactly like the other apps.
+• They should integrate naturally with the existing desktop.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MUSIC APP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Expand the music library.
+
+Add real playable songs.
+
+Include more songs from:
+
+• The Weeknd
+
+• Karan Aujla
+
+• Ed Sheeran
+
+Only use legitimate playable sources that the application already supports.
+
+Do not use fake songs.
+
+Do not create broken links.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RESUME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Update the resume so that it automatically includes every project already present in the portfolio.
+
+Do NOT invent projects.
+
+Do NOT remove existing resume information.
+
+Also make the Download Resume button download the real resume file instead of a placeholder.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AI ASSISTANT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Update the built-in AI assistant so it understands my portfolio.
+
+The assistant should know:
+
+• My birthday
+
+• My biography
+
+• My interests
+
+• My hobbies
+
+• My personality
+
+• My projects
+
+• My skills
+
+• My achievements
+
+• My certificates
+
+• My education
+
+• My social links
+
+• My long-term goals
+
+• My search answers
+
+The AI should answer questions about me accurately using only information available within the portfolio.
+
+Do not fabricate information.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WALLPAPERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Expand the wallpaper system.
+
+Requirements:
+
+• Add multiple beautiful wallpapers.
+
+• Allow selecting different wallpapers.
+
+• Allow uploading one of my own photos and using it as the desktop wallpaper.
+
+• Save the selected wallpaper.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DESKTOPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Currently there are only three virtual desktops.
+
+Increase the number of desktops.
+
+Allow creating additional desktops dynamically if possible.
+
+Keep the current desktop switching animations.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHOTOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Add the uploaded photos into the Photos application/gallery.
+
+Do not replace existing photos.
+
+Append these photos as new memories.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CERTIFICATES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Add the uploaded certificate to the Certificates section.
+
+Display it using the same design as existing certificates.
+
+Add a "Verify Certificate" button.
+
+Verification URL:
+
+https://certx.in/certificate/0270772f-3809-4400-b29b-1e1c61cd09971624118
+
+Clicking the button should open the verification page.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MY MENTORS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Inside Finder, add a new item:
+
+My Mentors
+
+Include an "Open" button.
+
+When clicked, it should open:
+
+https://udayrajsingh.github.io/My-Mentors/
+
+Use the same style as the other Finder items.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FINAL REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After implementing everything:
+
+• Preserve the existing UI and design language.
+• Preserve existing animations.
+• Preserve all projects.
+• Preserve certificates.
+• Preserve achievements.
+• Preserve responsiveness.
+• Preserve performance.
+• Ensure every newly added feature works correctly.
+• Do not leave placeholder content.
+• Verify that all new buttons, apps, links, wallpapers and downloads function correctly before finishing.
+
+
+these are the pics of mine and last pic is the certificate

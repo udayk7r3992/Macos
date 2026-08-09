@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>macOS Portfolio - Works on HP/Windows</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none; /* Prevents text selection while dragging */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            background: #000;
+        }
+
+        /* INTRO SCREEN */
+        .intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            cursor: pointer;
+            transition: opacity 0.5s ease;
+        }
+
+        .intro-content {
+            text-align: center;
+            color: white;
+        }
+
+        .intro-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+        }
+
+        .intro-content p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* DESKTOP (macOS style) */
+        .desktop {
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1500964757637-c85e8a162366?w=1600');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: none;
+        }
+
+        /* MENU BAR */
+        .menu-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #1a1a1a;
+            z-index: 100;
+        }
+
+        .menu-left {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu-item {
+            cursor: pointer;
+            padding: 0 8px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .menu-item:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-right {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* DESKTOP ICONS */
+        .desktop-icons {
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .desktop-icon {
+            width: 80px;
+            text-align: center;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 8px;
+            transition: background 0.2s;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .desktop-icon:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .desktop-icon .icon {
+            font-size: 48px;
+            margin-bottom: 5px;
+        }
+
+        .desktop-icon span {
+            font-size: 12px;
+        }
+
+        /* WINDOW */
+        .window {
+            position: absolute;
+            width: 500px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            display: none;
+            z-index: 200;
+            overflow: hidden;
+            animation: windowAppear 0.2s ease;
+        }
+
+        @keyframes windowAppear {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .window-header {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            cursor: move;
+        }
+
+        .window-title {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .window-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .window-control {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .window-control.close { background: #ff5f57; }
+        .window-control.minimize { background: #ffbd2e; }
+        .window-control.maximize { background: #28c840; }
+
+        .window-content {
+            padding: 20px;
+            min-height: 300px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        /* DOCK */
+        .dock {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(40px);
+            border-radius: 20px;
+            padding: 8px 16px;
+            display: flex;
+            gap: 16px;
+            z-index: 100;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .dock-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: all 0.2s;
+            font-size: 30px;
+        }
+
+        .dock-icon:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.3);
+        }
+
+        .dock-icon span {
+            font-size: 10px;
+            margin-top: 4px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .window { width: 90%; left: 5% !important; }
+            .dock-icon { width: 50px; height: 50px; font-size: 24px; }
+            .desktop-icon { width: 60px; }
+            .desktop-icon .icon { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- INTRO SCREEN -->
+<div class="intro" id="intro">
+    <div class="intro-content">
+        <h1>💻</h1>
+        <h1>Click to Start</h1>
+        <p>macOS Portfolio</p>
+    </div>
+</div>
+
+<!-- DESKTOP -->
+<div class="desktop" id="desktop">
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+        <div class="menu-left">
+            <div class="menu-item">🍎</div>
+            <div class="menu-item">Finder</div>
+            <div class="menu-item">File</div>
+            <div class="menu-item">Edit</div>
+            <div class="menu-item">View</div>
+            <div class="menu-item">Go</div>
+        </div>
+        <div class="menu-right">
+            <div class="menu-item">🔊</div>
+            <div class="menu-item">🔋 100%</div>
+            <div class="menu-item" id="time">--:--</div>
+        </div>
+    </div>
+
+    <!-- Desktop Icons -->
+    <div class="desktop-icons">
+        <div class="desktop-icon" data-window="about">
+            <div class="icon">👤</div>
+            <span>About Me</span>
+        </div>
+        <div class="desktop-icon" data-window="projects">
+            <div class="icon">📁</div>
+            <span>Projects</span>
+        </div>
+        <div class="desktop-icon" data-window="contact">
+            <div class="icon">📧</div>
+            <span>Contact</span>
+        </div>
+    </div>
+
+    <!-- Windows -->
+    <div id="aboutWindow" class="window" style="top: 100px; left: 100px;">
+        <div class="window-header">
+            <div class="window-title">About Me</div>
+            <div class="window-controls">
+                <div class="window-control close" data-window="about"></div>
+                <div class="window-control minimize"></div>
+                <div class="window-control maximize"></div>
+            </div>
+        </div>
+        <div class="window-content">
+            <h2>👋 Hi, I'm Adithya!</h2>
+            <p style="margin: 15px 0;">I'm a passionate developer who loves creating beautiful web experiences.</p>
+            <h3>Skills:</h3>
+            <ul style="margin: 10px 0 0 20px;">
+                <li>HTML/CSS/JavaScript</li>
+                <li>React & Node.js</li>
+                <li>Python & AI</li>
+                <li>UI/UX Design</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="projectsWindow" class="window" style="top: 150px; left: 150px;">
+        <div class="window-header">
+            <div class="window-title">Projects</div>
+            <div class="window-controls">
+                <div class="window-control close" data-window="projects"></div>
+                <div class="window-control minimize"></div>
+                <div class="window-control maximize"></div>
+            </div>
+        </div>
+        <div class="window-content">
+            <h2>📂 Featured Projects</h2>
+            <div style="margin: 15px 0;">
+                <strong>🌐 macOS Portfolio</strong>
+                <p style="margin: 5px 0 10px;">A macOS-style portfolio website</p>
+                
+                <strong>🎮 Game Hub</strong>
+                <p style="margin: 5px 0 10px;">Collection of browser-based mini games</p>
+                
+                <strong>📱 Weather App</strong>
+                <p style="margin: 5px 0 10px;">Real-time weather tracking app</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactWindow" class="window" style="top: 200px; left: 200px;">
+        <div class="window-header">
+            <div class="window-title">Contact</div>
+            <div class="window-controls">
+                <div class="window-control close" data-window="contact"></div>
+                <div class="window-control minimize"></div>
+                <div class="window-control maximize"></div>
+            </div>
+        </div>
+        <div class="window-content">
+            <h2>📫 Get in Touch</h2>
+            <div style="margin: 20px 0;">
+                <p>📧 Email: adithya@example.com</p>
+                <p>🐙 GitHub: @adithya-dev</p>
+                <p>💼 LinkedIn: /in/adithya</p>
+                <p>🐦 Twitter: @adithya_codes</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dock -->
+    <div class="dock">
+        <div class="dock-icon" data-window="about">
+            🧑‍💻<span>About</span>
+        </div>
+        <div class="dock-icon" data-window="projects">
+            📁<span>Projects</span>
+        </div>
+        <div class="dock-icon" data-window="contact">
+            ✉️<span>Contact</span>
+        </div>
+        <div class="dock-icon" id="refreshDock">
+            🔄<span>Refresh</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Intro click handler
+    document.getElementById('intro').addEventListener('click', function() {
+        this.style.opacity = '0';
+        setTimeout(() => {
+            this.style.display = 'none';
+            document.getElementById('desktop').style.display = 'block';
+        }, 500);
+    });
+
+    // Update time
+    function updateTime() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('time').textContent = timeString;
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+
+    // Window management
+    const windows = {
+        about: document.getElementById('aboutWindow'),
+        projects: document.getElementById('projectsWindow'),
+        contact: document.getElementById('contactWindow')
+    };
+
+    // Open window function
+    function openWindow(windowName) {
+        const win = windows[windowName];
+        if (win) {
+            win.style.display = 'block';
+            // Bring to front
+            win.style.zIndex = Date.now();
+        }
+    }
+
+    // Close window function
+    function closeWindow(windowName) {
+        const win = windows[windowName];
+        if (win) {
+            win.style.display = 'none';
+        }
+    }
+
+    // Add click handlers to all icons that can open windows
+    document.querySelectorAll('[data-window]').forEach(element => {
+        element.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const windowName = element.getAttribute('data-window');
+            if (windowName) {
+                openWindow(windowName);
+            }
+        });
+    });
+
+    // Add close handlers
+    document.querySelectorAll('.window-control.close').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const windowId = btn.closest('.window').id;
+            const windowName = windowId.replace('Window', '');
+            closeWindow(windowName);
+        });
+    });
+
+    // Draggable windows functionality
+    let activeWindow = null;
+    let offsetX, offsetY;
+
+    document.querySelectorAll('.window').forEach(window => {
+        const header = window.querySelector('.window-header');
+        
+        header.addEventListener('mousedown', (e) => {
+            activeWindow = window;
+            offsetX = e.clientX - window.offsetLeft;
+            offsetY = e.clientY - window.offsetTop;
+            window.style.zIndex = Date.now();
+            
+            const onMouseMove = (e) => {
+                if (activeWindow) {
+                    let newX = e.clientX - offsetX;
+                    let newY = e.clientY - offsetY;
+                    
+                    // Keep window in bounds
+                    newX = Math.max(0, Math.min(newX, window.innerWidth - activeWindow.offsetWidth));
+                    newY = Math.max(40, Math.min(newY, window.innerHeight - 100));
+                    
+                    activeWindow.style.left = newX + 'px';
+                    activeWindow.style.top = newY + 'px';
+                }
+            };
+            
+            const onMouseUp = () => {
+                activeWindow = null;
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            };
+            
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+            e.preventDefault();
+        });
+    });
+
+    // Refresh button (reload page)
+    document.getElementById('refreshDock').addEventListener('click', () => {
+        location.reload();
+    });
+
+    // Keyboard shortcuts (Cmd+W to close, Cmd+R to refresh)
+    document.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'w') {
+            e.preventDefault();
+            // Find active window and close it
+            const visibleWindows = document.querySelectorAll('.window[style*="display: block"]');
+            if (visibleWindows.length > 0) {
+                const lastWindow = visibleWindows[visibleWindows.length - 1];
+                const windowName = lastWindow.id.replace('Window', '');
+                closeWindow(windowName);
+            }
+        }
+        if ((e.metaKey || e.ctrlKey) && e.key === 'r') {
+            e.preventDefault();
+            location.reload();
+        }
+    });
+
+    // Click on desktop to bring nothing to front (just prevent)
+    document.getElementById('desktop').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('desktop') || e.target.classList.contains('desktop-icons')) {
+            // Do nothing, just keep desktop focused
+        }
+    });
+</script>
+</body>
+</html>
